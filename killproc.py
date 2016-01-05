@@ -6,12 +6,6 @@ import psutil
 import argparse
 import sys
 
-parser = argparse.ArgumentParser('Killproc', description='List and kill running processes by name or PID', epilog='Note Target Name is case sensitive')
-parser.add_argument('-p', '--PID', dest = 'target_PID')
-parser.add_argument('-n', '--name', dest = 'target_name')
-
-args = parser.parse_args()
-
 def listproc():
     col1 = "Process Name"
     col2 = "PID"
@@ -78,4 +72,8 @@ def main():
         listproc()
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser('Killproc', description='List and kill running processes by name or PID', epilog='Note Target Name is case sensitive')
+    parser.add_argument('-p', '--PID', dest = 'target_PID')
+    parser.add_argument('-n', '--name', dest = 'target_name')
+    args = parser.parse_args()
     main()
