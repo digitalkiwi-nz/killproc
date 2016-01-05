@@ -1,3 +1,7 @@
+# killproc.py:  List and kill running processes by name or PID
+# Author:       David White
+# Date:         November 2015
+
 import psutil
 import argparse
 import sys
@@ -75,5 +79,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
